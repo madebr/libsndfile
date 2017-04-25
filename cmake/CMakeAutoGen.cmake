@@ -5,7 +5,7 @@ set(AUTOGEN_SCRIPT "${CMAKE_MODULE_PATH}/CMakeAutoGenScript.cmake")
 
 function(lsf_autogen DIR_REL NAME_WE)
 	set(EXTS ${ARGN})
-	set(INPUT "${CMAKE_SOURCE_DIR}/${DIR_REL}/${NAME_WE}.def")
+	set(INPUT "${CMAKE_CURRENT_SOURCE_DIR}/${DIR_REL}/${NAME_WE}.def")
 	set(OUTPUTS)
 	foreach(EXT ${EXTS})
 		list(APPEND OUTPUTS "${NAME_WE}.${EXT}")
