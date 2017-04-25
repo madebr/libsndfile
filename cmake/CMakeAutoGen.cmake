@@ -10,7 +10,7 @@ function(lsf_autogen DIR_REL NAME_WE)
 	foreach(EXT ${EXTS})
 		list(APPEND OUTPUTS "${NAME_WE}.${EXT}")
 	endforeach()
-	add_autogen_target("${INPUT}" "${DIR_REL}" ${OUTPUTS})
+	add_autogen_target("${INPUT}" "${CMAKE_CURRENT_BINARY_DIR}/${DIR_REL}" ${OUTPUTS})
 endfunction()
 
 function(add_autogen_target INPUT OUTPUTDIR)
